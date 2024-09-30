@@ -13,4 +13,9 @@ class CharactersRepository{
     return result;
   }
 
+  Future<CharactersResponse?> filterCharacters({required String characterName}) async {
+    final result = await webService.filterCharacters(characterName: characterName);
+    return result;
+  }
+
   }
